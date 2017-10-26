@@ -30,6 +30,10 @@ if(isset($_SESSION['user']))
 <script src="js/sjfb-builder.js" type="text/javascript" ></script> <!-- form builder -->
 <script src="js/sjfb-html-generator.js" type="text/javascript" ></script> <!-- form generator -->
 
+<!-- formbuilder JS -->  
+<script src="assets/js/form-builder.min.js" type="text/javascript" ></script> <!-- form builder -->
+<script src="assets/js/form-render.min.js" type="text/javascript" ></script> <!-- form render -->
+  
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -194,6 +198,17 @@ if(isset($_SESSION['user']))
     <!-- ################################################################################################ -->
     <!-- / main body -->
     <div class="clear"></div>
+       <!-- ################################################################################################
+                              Aca deberia estar el formbuilder
+                  ########################################################-->
+      <div id="build-wrap"></div>
+      
+      <script>jQuery(function($) {
+        var fbTemplate = document.getElementById('build-wrap');
+        $(fbTemplate).formBuilder();
+        });
+      </script>
+       <!-- ################################################################################################ -->
   </main>
 </div>
 <!-- ################################################################################################ -->
