@@ -1,4 +1,5 @@
 <?php
+include 'lib/config.php';
 //get the submitted data and decode it
 $form_data = json_decode(file_get_contents('php://input'));
 
@@ -13,4 +14,5 @@ $formID = $field['formID'];
 $formFields = json_encode($field['formFields']);
 
 //now just save it to your database.
+
 echo json_encode('If this was not a demo, your form would have saved successfully!');
